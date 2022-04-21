@@ -1,0 +1,22 @@
+body {
+    padding: 30px;
+
+}
+
+p {
+    margin: 0px;
+    cursor: pointer;
+}
+
+.list-group-item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* background-color:aqua; */
+}
+
+
+
+.complete {
+    text-decoration: line-through;
+}
