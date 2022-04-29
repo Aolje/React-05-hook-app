@@ -9,10 +9,6 @@ export const MultipleCustomHooks = () => {
 
     const { loading, data } = useFetch(`https://breakingbadapi.com/api/quotes/${counter}`);
     const { author, quote } = !!data && data[0];
-
-    console.log(data);
-
-
     return (
         <div>
             <h1>BreakinBad Quotes</h1>
