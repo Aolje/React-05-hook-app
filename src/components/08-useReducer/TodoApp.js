@@ -26,7 +26,6 @@ export const TodoApp = () => {
     }, [todos]);
 
     const handleDelete = (todoId) => {
-        console.log('Se elimina:  ', todoId)
         const actionR = {
             type: 'delete',
             payload: todoId,

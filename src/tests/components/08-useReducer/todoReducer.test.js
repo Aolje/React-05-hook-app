@@ -24,4 +24,32 @@ describe('Pruebas en todoReducer', () => {
         expect(state.length).toBe(3);
         expect(state).toEqual([...demoTodos, newTodo]);
     });
+
+    test('should de borrar un todo', () => {
+        // action.payload = it del todo
+        const newTodo = [{
+            id: 2,
+            desc: 'Aprender Mongo',
+            done: false
+        }];
+        const action = {
+            type: 'delete',
+            payload: 1
+        };
+        const state = todoreducer(demoTodos, action);
+        expect(state.length).toBe(1);
+        expect(state).toEqual(newTodo);
+    });
+
+    test('should de hacer el toggle del todo', () => {
+       
+        const action = {
+            type: 'toggle',
+            payload: 1
+        };
+        const state = todoreducer(demoTodos, action);
+        expect(state[0].done).toBe(true);
+        expect(state[1]).toEqual(demoTodos[1]);
+
+    })
 })
